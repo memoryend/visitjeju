@@ -8,21 +8,57 @@
 	<link rel="stylesheet" href="css/sub.css">
 	<link rel="stylesheet" href="css/fullpage.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+
+		$(document).ready(function(){
+			var $menu = $("#navBottom");
+			var $menuPos = $menu.offset().top;
+			var $menu2 = $("#navTop");
+			var $menuTop = $menu.offset().top;
+
+			console.log("s:"+$menuPos);
+			$(window).on("scroll", function(){
+					var scrollY = window.pageYOffset;
+					//var scrollY = $("html,body").scrollTop(); //위에 것과 동일
+					console.log(scrollY);
+					if (scrollY > $menuPos - 90){
+						$("#navBottom").addClass("fixed");
+					}else{
+						$("#navBottom").removeClass("fixed");
+					}
+
+					if (scrollY > 110 ){
+						
+						$("#navTop").addClass("fixed");
+					}else{
+						$("#navTop").removeClass("fixed");
+					}
+
+				});
+
+		});
+	</script>
 </head>
 <body>
 	<div id="wrap">
 		<nav id="navTop">
 		<h1><a href="index.html"><img src="images/common/h_logo.png" alt="제주관광공사"></a></h1>
 			<ul id="topMenu">
-				<li data-menuanchor="1st"><a href="#1st">관광지</a></li>
-				<li data-menuanchor="2st"><a href="#2st">음식점</a></li>
-				<li data-menuanchor="3st"><a href="#3st">숙박</a></li>
-				<li data-menuanchor="4st"><a href="#4st">쇼핑</a></li>
-				<li class="etc"><a href="#">여행필수정보</a></li>
-				<li class="etc"><a href="#">제주여행추천</a></li>
+				<li><a href="sub1.html">관광지</a></li>
+				<li class="active"><a href="sub2.html">음식점</a></li>
+				<li><a href="sub3.html">숙박</a></li>
+				<li><a href="sub4.html">쇼핑</a></li>
+				<li><a href="sub5.html">여행필수정보</a></li>
+				<li><a href="sub6.html">제주여행추천</a></li>
 			</ul>
 		</nav>
-		<p class=sub_bg_01></p>
+		<div class="sub-visual">
+				<p class=sub_bg_02></p>
+				<div class="sub-text">
+					<h2>제주의 전통음식부터 다양한 음식의 천국 제주도</h2>
+					<p>여행의 즐거움 중 빼놓을 수 없는 것은 단연 음식이다.<br>제주도는 흑돼지, 말요리 그리고 해산물 등 다양한 음식문화를 접할 수 있다.<br>제주도의 전통 음식부터 줄을 서서 기다리는 최고 인기의 음식까지 모두 즐겨보자.</p>
+				</div>
+		</div>
 		<div id="container">
 			<div id="navBottom">
 					<ul id="subMenu">
@@ -34,66 +70,60 @@
 						<li><a href="#">카페</a></li>
 					</ul>
 			</div>
-			<div class="sub-visual">
-				<div class="sub-text">
-					<h2>제주의 전통음식부터 다양한 음식의 천국 제주도</h2>
-					<p>여행의 즐거움 중 빼놓을 수 없는 것은 단연 음식이다.<br>제주도는 흑돼지, 말요리 그리고 해산물 등 다양한 음식문화를 접할 수 있다.<br>제주도의 전통 음식부터 줄을 서서 기다리는 최고 인기의 음식까지 모두 즐겨보자.</p>
-				</div>
-			</div>
 			<div class="section">
 				<div class="banner-wrap">
 					<ul>
 						<li onclick="location.href='#'">
 							<div class="card">
-								<img src="images/sub01/card01.jpg" alt="성산일출봉">
+								<img src="images/sub02/card01.jpg" alt="앞뱅디식당">
 								<div class="card-body">
 									<h3 class="card-title">앞뱅디식당</h3>
-									<p class="card-text">제주특별자치도 제주시 우도면 연평리 904-1</p>
+									<p class="card-text">제주특별자치도 제주시 연동 324-1</p>
 								</div>
 							</div>
 						</li>
 						<li onclick="location.href='#'">
 							<div class="card">
-								<img src="images/sub01/card02.jpg" alt="성산일출봉">
+								<img src="images/sub02/card02.jpg" alt="바다의집">
 								<div class="card-body">
 									<h3 class="card-title">바다의집</h3>
-									<p class="card-text">제주특별자치도 서귀포시 성산읍 성산리 1</p>
+									<p class="card-text">제주특별자치도 서귀포시 성산읍 오조리 366-1</p>
 								</div>
 							</div>
 						</li>
 						<li onclick="location.href='#'">
 							<div class="card">
-								<img src="images/sub01/card03.jpg" alt="성산일출봉">
+								<img src="images/sub02/card03.jpg" alt="사계바다">
 								<div class="card-body">
 									<h3 class="card-title">사계바다</h3>
-									<p class="card-text">제주특별자치도 서귀포시 안덕면 상창리 271</p>
+									<p class="card-text">제주도 서귀포시 안덕면 사계리 2147-13</p>
 								</div>
 							</div>
 						</li>
 						<li onclick="location.href='#'">
 							<div class="card">
-								<img src="images/sub01/card04.jpg" alt="성산일출봉">
+								<img src="images/sub02/card04.jpg" alt="고집돌우럭(제주공항점)">
 								<div class="card-body">
 									<h3 class="card-title">고집돌우럭(제주공항점)</h3>
-									<p class="card-text">제주특별자치도 제주시 한림읍 협재리 2447</p>
+									<p class="card-text">제주시 임항로 30</p>
 								</div>
 							</div>
 						</li>
 						<li onclick="location.href='#'">
 							<div class="card">
-								<img src="images/sub01/card05.jpg" alt="성산일출봉">
+								<img src="images/sub02/card05.jpg" alt="흑돈가">
 								<div class="card-body">
 									<h3 class="card-title">흑돈가</h3>
-									<p class="card-text">제주특별자치도 제주시 구좌읍 월정리 33</p>
+									<p class="card-text">제주특별자치도 제주시 노형동 3811</p>
 								</div>
 							</div>
 						</li>
 						<li onclick="location.href='#'">
 							<div class="card">
-								<img src="images/sub01/card06.jpg" alt="성산일출봉">
+								<img src="images/sub02/card06.jpg" alt="낭뜰에쉼팡">
 								<div class="card-body">
 									<h3 class="card-title">낭뜰에쉼팡</h3>
-									<p class="card-text">제주특별자치도 제주시 조천읍 교래리 산137-1</p>
+									<p class="card-text">제주특별자치도 제주시 조천읍 남조로 2343</p>
 								</div>
 							</div>
 						</li>
@@ -107,6 +137,47 @@
 					<input type="image" src="images/sub01/sub_search.png" alt="관광지검색" id="sub-kyeword-search-icon">
 				</p>
 			</form>
+			<div class="pagination">
+				<a href="#">&laquo;</a>
+				<a href="#">1</a>
+				<a class="active" href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">&raquo;</a>
+			</div>
+		</div>
+		<div id="footer-wrap">
+			<footer id="footer">
+				<ul class="footer-top">
+					<li><a href="#">개인정보취급방침</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">틀린정보신고</a></li>
+					<li><a href="#">제주관광문의</a></li>
+					<li><a href="#">제주관광사진이용</a></li>
+					<li><a href="#">관광업체등록신청</a></li>
+				</ul>
+				<ul class="footer-bottom">
+					<li>
+						(63122) 제주특별자치도 제주시 선덕로 23(연동) 제주웰컴센터
+					</li>
+					<li>
+						<span>관광문의 : 제주관광공사</span><span>Tel : 064-740-6000~1</span><span>FAX : 064-740-6090</span><span>사업자등록번호 : 616-82-21432</span>
+					</li>
+					<li>
+						관광불편신고 : 제주안내 120콜센터(국번없이 120번)
+					</li>
+				</ul>
+				<p class="copy"><small>Copyright&copy;Jeju Tourism Organization, All rights reserved.</small></p>
+				<p class="noti"><small>홈페이지에 게시된 이메일 주소가 자동수집되는 것을 거부하며, 위반시 정보통신망법에 의해 처벌될 수 있습니다.</small></p>
+				<p class="img"><a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110"><img src="images/common/footer_wa.png" alt="웹접근성로고"></a></p>
+				<ul class="sns">
+					<li><a href="https://www.facebook.com/visitjeju.kr/"><img src="images/common/facebook-button.png" alt="facebook"></a></li>
+					<li><a href="http://blog.naver.com/jtowelcome"><img src="images/common/blog-button.png" alt="naver blog"></a></li>
+					<li><a href="https://www.instagram.com/visitjeju.kr/"><img src="images/common/instagram-button.png" alt="imstagram"></a></li>
+				</ul>
+			</footer>
 		</div>
 	</div>
 </body>
