@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/sub.css">
 	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script>
 
@@ -42,21 +43,23 @@
 <body>
 	<div id="wrap">
 		<nav id="navTop">
-		<h1><a href="index.html"><img src="images/common/h_logo.png" alt="제주관광공사"></a></h1>
-			<ul id="topMenu">
-				<li><a href="sub1.html">관광지</a></li>
-				<li><a href="sub2.html">음식점</a></li>
-				<li class="active"><a href="sub3.html">숙박</a></li>
-				<li><a href="sub4.html">쇼핑</a></li>
-				<li><a href="sub5.html">여행필수정보</a></li>
-				<li><a href="sub6.html">제주여행추천</a></li>
-			</ul>
+		<div class="navTop-wrap">
+			<h1><a href="index.html"><img src="images/common/h_logo.png" alt="제주관광공사"></a></h1>
+				<ul id="topMenu">
+					<li><a href="sub1.html">관광지</a></li>
+					<li><a href="sub2.html">음식점</a></li>
+					<li class="active"><a href="sub3.html">숙박</a></li>
+					<li><a href="sub4.html">쇼핑</a></li>
+					<li><a href="sub5.html">여행필수정보</a></li>
+					<li><a href="sub6.html">제주여행추천</a></li>
+				</ul>
+		</div>
 		</nav>
 		<div class="sub-visual">
 				<p class=sub_bg_03></p>
 				<div class="sub-text">
-					<h2>호텔부터 민박까지 다양한 종류의 숙소</h2>
-					<p>제주도 숙박시설에는 호텔 , 리조트, 펜션 , 풀빌라 , 독채펜션, 게스트 하우스 , 민박, 모텔까지 다양한 종류의 숙소가 있다.<br>여행을 함께 하는 구성원 그리고 여행의 목적, 체류기간에 맞춰 숙소를 결정하면 된다.<br>가족, 연인을 위한 아늑하고 낭만적인 호텔이나 친구와 여행하기에 좀더 편한 펜션이 있고<br>두 가족 이상의 대가족은 독립적인 공간의 독채 펜션​ 혹은 리조트가 좋을 것이다.<br>부모님을 모시고 가거나 아이와 함께 간다면 수영장이 있는 제주도 호텔이나 풀빌라를 선택하는 것이 좋다.</p>
+					<h2 class="fadeInLeft animated delay-0.5s">호텔부터 민박까지 다양한 종류의 숙소</h2>
+					<p class="fadeInRight animated delay-0.5s">제주도 숙박시설에는 호텔 , 리조트, 펜션 , 풀빌라 , 독채펜션, 게스트 하우스 , 민박, 모텔까지 다양한 종류의 숙소가 있다.<br>여행을 함께 하는 구성원 그리고 여행의 목적, 체류기간에 맞춰 숙소를 결정하면 된다.<br>가족, 연인을 위한 아늑하고 낭만적인 호텔이나 친구와 여행하기에 좀더 편한 펜션이 있고<br>두 가족 이상의 대가족은 독립적인 공간의 독채 펜션​ 혹은 리조트가 좋을 것이다.<br>부모님을 모시고 가거나 아이와 함께 간다면 수영장이 있는 제주도 호텔이나 풀빌라를 선택하는 것이 좋다.</p>
 				</div>
 		</div>
 		<div id="container">
@@ -130,22 +133,24 @@
 					</ul>
 				</div>
 			</div>
-			<form action="get" class=sub-search-wrap>
-				<p>
-					<label for="sub-keyword-search"></label>
-					<input type="text" name="sub-keyword-search" id="sub-keyword-search" maxlength="20">
-					<input type="image" src="images/sub01/sub_search.png" alt="관광지검색" id="sub-kyeword-search-icon">
-				</p>
-			</form>
-			<div class="pagination">
-				<a href="#">&laquo;</a>
-				<a href="#">1</a>
-				<a class="active" href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">6</a>
-				<a href="#">&raquo;</a>
+			<div class="fwrap">
+				<form action="get" class=sub-search-wrap>
+					<p>
+						<label for="sub-keyword-search"></label>
+						<input type="text" name="sub-keyword-search" id="sub-keyword-search" maxlength="20">
+						<input type="image" src="images/sub01/sub_search.png" alt="관광지검색" id="sub-kyeword-search-icon">
+					</p>
+				</form>
+				<div class="pagination">
+					<a href="#">&laquo;</a>
+					<a href="#">1</a>
+					<a class="active" href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">&raquo;</a>
+				</div>
 			</div>
 		</div>
 		<div id="footer-wrap">
