@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
@@ -20,7 +20,6 @@
 			console.log("s:"+$menuPos);
 			$(window).on("scroll", function(){
 					var scrollY = window.pageYOffset;
-					//var scrollY = $("html,body").scrollTop(); //위에 것과 동일
 					console.log(scrollY);
 					if (scrollY > $menuPos - 90){
 						$("#navBottom").addClass("fixed");
